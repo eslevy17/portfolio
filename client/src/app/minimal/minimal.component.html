@@ -1,0 +1,91 @@
+<div @fade>
+
+    <!-- <div class="navbar"> -->
+        <button class="backbutton" [routerLink]="['/']"><b>BACK</b></button>
+        <!-- <h3 class="titletext">Eytan Levy's time-traveling portfolio: Minimal</h3> -->
+    <!-- </div> -->
+
+    <div class="parallaxdiv1">
+        <div class="textblockright">
+            <h3 style="text-align: center;">Intro:</h3>
+            <p>{{data.intro}}</p>
+        </div>
+    </div>
+
+    <div class="contentblock">
+        <h2 style="text-align: center;">- Professional Experience -</h2>
+        <div class="jobblock" *ngFor="let job of data.experience">
+            <div *ngIf="job.title != 'Miscellaneous'">
+                <p style="text-align: center;"><b>{{job.title}}</b> ({{job.dates}})</p>
+                <p>{{job.description}}</p>
+                <ul *ngFor="let skill of job.skills">
+                    <li>{{skill}}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="parallaxdiv2">
+        <div class="textblockleft">
+            <h3 style="text-align: center;">Interests and extracurriculars:</h3>
+            <ul>
+                <li *ngFor="let interest of data.interests">{{interest}}</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="contentblock">
+        <h2 style="text-align: center;">- Educational History -</h2>
+        <div class="schoolblock "*ngFor="let school of data.education">
+            <p><b>{{school.school}}</b> ({{school.dates}})</p>
+            <p>{{school.degree}}</p>
+        </div>
+    </div>
+
+    <div class="parallaxdiv3">
+        <div class="textblockright">
+            <h3 style="text-align: center;">References</h3>
+            <p>(coming soon!)</p>
+        </div>
+    </div>
+
+    <div class="contentblock">
+        <h2 style="text-align: center;">- Coding Skills -</h2>
+        <div class="skillblock">
+            <p style="text-align: center;"><b>Front-end design:</b></p>
+            <ul>
+                <li *ngFor="let skill of data.skills.design">{{skill}}</li>
+            </ul>
+        </div>
+        <div class="skillblock">
+            <p style="text-align: center;"><b>Languages:</b></p>
+            <ul>
+                <li *ngFor="let skill of data.skills.languages">{{skill}}</li>
+            </ul>
+        </div>
+        <div class="skillblock">
+            <p style="text-align: center;"><b>Frameworks:</b></p>
+            <ul>
+                <li *ngFor="let skill of data.skills.frameworks">{{skill}}</li>
+            </ul>
+        </div>
+        <div class="skillblock">
+            <p style="text-align: center;"><b>Databases:</b></p>
+            <ul>
+                <li *ngFor="let skill of data.skills.databases">{{skill}}</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="parallaxdiv4">
+        <div class="textblockleft">
+            <h3 style="text-align: center;">Contact info:</h3>
+            <div *ngFor="let site of data.contact">
+                <p><a href="{{site.url}}" target="_blank">{{site.site}}</a>   </p>
+            </div>
+            <p><a href="mailto:{{data.email}}">Email</a></p>
+
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,181 @@
+* {
+    font-family: 'open sans', sans-serif;
+}
+
+p {
+    line-height: 1.5;
+}
+
+.navbar {
+    background-color: #4b4b4b;
+    width: 100%;
+    text-align: center;
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+    color: #e8e8e8;
+    margin: 0px;
+    padding: 1px;
+}
+
+.backbutton {
+    font-size: 16px;
+    background-color: #4b4b4b;
+    color: #e8e8e8;
+    border: none;
+    border-radius: 1px;
+    cursor: pointer;
+    padding: 12px 36px;
+    position: sticky;
+    top: 8px;
+    left: 8px;
+    float: left;
+    z-index: 2;
+    opacity: 0.9;
+}
+
+.backbutton:hover {
+    opacity: 0.7;
+}
+
+.parallaxdiv1 {
+    background: url(../../assets/images/shoe-hang.jpg);
+    min-height: 640px;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.parallaxdiv2 {
+    background: url(../../assets/images/montenegro-climb.jpg);
+    min-height: 640px;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.parallaxdiv3 {
+    background: url(../../assets/images/pamukkale-climb.jpg);
+    min-height: 640px;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.parallaxdiv4 {
+    background: url(../../assets/images/croatia-walls.jpg);
+    min-height: 640px;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.textblockright {
+    font-size: 16px;
+    max-width: 300px;
+    position: absolute;
+    top: 30%;
+    right: 10%;
+    background-color: #4b4b4b;
+    padding: 0 24px;
+    color: #e8e8e8;
+    box-shadow: 2px 2px 8px 2px #474747;
+    opacity: 0.9;
+}
+
+.textblockleft {
+    font-size: 16px;
+    max-width: 300px;
+    position: absolute;
+    top: 25%;
+    left: 10%;
+    background-color: #4b4b4b;
+    padding: 0 24px;
+    color: #e8e8e8;
+    box-shadow: 2px 2px 8px 2px #474747;
+    opacity: 0.9;
+}
+
+.textblockleft li, .textblockright li {
+    line-height: 2;
+}
+
+.textblockleft a {
+    color: #899efb;
+}
+
+.textblockleft a:visited {
+    color: #9672c4;
+}
+
+.contentblock {
+    padding: 12px 18px;
+    background-color: #fcfcfc;
+}
+
+.contentblock li {
+    font-size: 14px;
+}
+
+.contentblock p, .contentblock h1, .contentblock h2, .contentblock h3, .contentblockh4, .contentblock h5, .contentblock h6, .contentblock li {
+    color: #353535;
+}
+
+.jobblock {
+    width: 100%;
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
+    padding: 16px;
+}
+
+.skillblock {
+    width: 100%;
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
+    padding: 12px;
+}
+
+.skillblock li {
+    line-height: 2;
+}
+
+.schoolblock {
+    width: 100%;
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
+    padding: 12px;
+    text-align: center;
+}
+
+@media only screen and (min-width: 480px) {
+    /* .jobblock {width: 33%} */
+    .skillblock {width: 50%}
+    /* .schoolblock {width: 50%} */
+}
+
+@media only screen and (min-width: 768px) {
+    .jobblock {width: 50%}
+    .skillblock {width: 25%}
+    .schoolblock {width: 50%}
+}
+
+@media only screen and (min-width: 1024px) {
+    .jobblock {width: 33%}
+    /* .skillblock {width: 25%} */
+    /* .schoolblock {width: 50%} */
+}

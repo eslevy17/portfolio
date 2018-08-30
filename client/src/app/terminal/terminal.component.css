@@ -1,0 +1,118 @@
+* {
+    /* background-color: black; */
+    margin: 0px;
+    font-family: courier;
+    font-weight: 700;
+    color: green;
+}
+
+.backdrop {
+    background-color: black;
+    width: 100%;
+    min-height: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+}
+
+.menu {
+    border: 6px solid green;
+    border-style: double;
+    margin: 12px auto;
+    max-width: 600px;
+    padding: 12px;
+    box-sizing: border-box;
+}
+
+.menucommands {
+    min-width: 140px;
+    width: 50%;
+}
+
+.antiquewhite {
+    color: antiquewhite;
+}
+
+.darkcyan {
+    color: darkcyan;
+}
+
+.tan {
+    color: tan;
+}
+
+.lightgreen {
+    color: lightgreen;
+}
+
+.subtitle {
+    text-align: center;
+    margin: 12px;
+}
+
+.titlediv {
+    border: 6px solid darkcyan;
+    border-style: double;
+}
+
+p {
+    margin: 4px;
+}
+
+#cursor {
+    margin: 4px 0 0 4px;
+    width: 14px;
+    height: 18px;
+    background-color: green;
+    display: inline-block;
+    vertical-align: top;
+}
+
+#loadingchamber {
+    width: 200px;
+    border: 2px solid green;
+    padding: 2px;
+    box-sizing: border-box;
+}
+
+#loadingbar {
+    height: 20px;
+    width: 1%;
+    background-color: green;
+}
+
+#content {
+    display: none;
+}
+
+.inline-block {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.backdrop {
+    background-color: black;
+}
+
+.subtitle {
+    text-align: center;
+}
+
+.lightgreen {
+    color: lightgreen;
+}
+
+.darkcyan {
+    color: darkcyan;
+}
+
+.tan {
+    color: tan;
+}
+
+.indent {
+    margin-left: 10px;
+}
+
+.subsection {
+    display: none;
+}
