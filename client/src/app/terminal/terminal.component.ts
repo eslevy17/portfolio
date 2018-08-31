@@ -68,7 +68,7 @@ export class TerminalComponent implements OnInit {
         let loadingbar = document.getElementById('loadingbar')
         let content = document.getElementById('content')
         let width = 1;
-        let interval = setInterval(progress, 10);
+        let interval = setInterval(progress, 100);
         function progress() {
             if (width >= 100) {
                 loadingbar.style.width = width + '%';
