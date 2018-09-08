@@ -6,7 +6,7 @@
     <!-- </div> -->
 
     <div class="parallaxdiv image1">
-        <div class="textblock textblockright">
+        <div class="textblock textblockright textblocklow">
             <h3 style="text-align: center;">Intro:</h3>
             <p>{{data.intro}}</p>
         </div>
@@ -61,7 +61,7 @@
     </div>
 
     <div class="parallaxdiv image4">
-        <div class="textblock textblockleft" style="text-align: center;">
+        <div class="textblock textblockleft textblocklow" style="text-align: center;">
             <h3>Contact info:</h3>
             <p *ngFor="let site of data.contact"><a href="{{site.url}}" target="_blank">{{site.site}}</a></p>
             <p><a href="mailto:{{data.email}}">Email</a></p>
