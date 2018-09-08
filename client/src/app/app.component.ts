@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
     title = 'Live Portfolio';
     data = {
-        intro: 'Eytan is a full-stack developer in the Seattle area, interested in taking on new challenges in web design and programming challenges. Algorithm practice has been the most fun, though watching a project start coming together is a great feeling too.',
+        intro: 'Eytan is a full-stack developer in the Seattle area, interested in taking on new challenges in web design and programming. Algorithm practice has been the most fun, though watching a project start coming together is a great feeling too.',
         experience: [
             {
                 title: 'Travel gear blogger',
@@ -38,9 +38,9 @@ export class AppComponent {
             },
             {
                 title: 'Private Tutor',
-                organization: 'Self-employed',
+                organization: 'Wyzant',
                 dates: '2013 to 2015',
-                description: 'Taught students of various ages, in subjects ranging from liberal arts to physics.',
+                description: 'Taught students of various ages, either professionally (for the dates listed) or as a family favor (for decades prior), in subjects ranging from liberal arts to physics.',
                 skills: [
                     'Essay reviews',
                     'Math practice',
@@ -87,7 +87,7 @@ export class AppComponent {
             {
                 school: 'Coding Dojo',
                 dates: '2018',
-                degree: "Triple Black Belt, the highest honor!"
+                degree: "Full-Stack Development Course"
             },
             {
                 school: 'University of Washington',
@@ -108,31 +108,152 @@ export class AppComponent {
                 dates: '2000 to 2001'
             }
         ],
-        skills: {
-            design: [
-                'HTML',
-                'CSS',
-                'JQuery',
-                'Bootstrap',
-                'Materialize',
-            ],
-            languages: [
-                'JavaScript',
-                'Python',
-                'C#',
-            ],
-            frameworks: [
-                'Flask',
-                'Django',
-                'Angular',
-                'ASP.NET Core',
-            ],
-            databases: [
-                'SQL',
-                'SQLite',
-                'MongoDB',
-            ]
-        },
+        skills: [
+            {
+                name: 'Design',
+                technologies: [
+                    'HTML',
+                    'CSS',
+                    'JQuery',
+                    'Bootstrap',
+                    'Materialize',
+                ]
+            },
+            {
+                name: 'Languages',
+                technologies: [
+                    'JavaScript',
+                    'Python',
+                    'C#',
+                ]
+            },
+            {
+                name: 'Frameworks',
+                technologies: [
+                    'Flask',
+                    'Django',
+                    'Angular',
+                    'ASP.NET Core',
+                ]
+            },
+            {
+                name: 'Databases',
+                technologies: [
+                    'SQL',
+                    'SQLite',
+                    'MongoDB',
+                ]
+            }
+        ],
+        projects: [
+            {
+                name: 'jQueryGoals',
+                description: 'A Django project using jQuery animations and external data visualization libraries to create a colorful progress-tracking app.',
+                video: '../assets/videos/jQueryGoalsDemo.mp4',
+                repository: 'https://github.com/eslevy17/jQueryGoals',
+                technologies: [
+                    {
+                        name: 'HTML5',
+                        url: '../assets/images/icons/html5.png'
+                    },
+                    {
+                        name: 'CSS3',
+                        url: '../assets/images/icons/css3.png'
+                    },
+                    {
+                        name: 'JavaScript',
+                        url: '../assets/images/icons/javascript.png'
+                    },
+                    {
+                        name: 'Python',
+                        url: '../assets/images/icons/python.png'
+                    },
+                    {
+                        name: 'Django',
+                        url: '../assets/images/icons/django.png'
+                    },
+                    {
+                        name: 'Materialize',
+                        url: '../assets/images/icons/materialize.png'
+                    },
+                    {
+                        name: 'jQuery',
+                        url: '../assets/images/icons/jquery.png'
+                    },
+                    {
+                        name: 'SQLite',
+                        url: '../assets/images/icons/sqlite.png'
+                    },
+                ]
+            },
+            // {
+            //     name: 'Live Portfolio',
+            //     description: 'An Angular/Node project with multiple versions at the front end, from the olden days of terminal commands to the minimalism of modern-day web design.',
+            //     video: '',
+            //     technologies: [
+            //         {
+            //             name: 'HTML5',
+            //             url: '../assets/images/icons/html5.png'
+            //         },
+            //         {
+            //             name: 'CSS3',
+            //             url: '../assets/images/icons/css3.png'
+            //         },
+            //         {
+            //             name: 'JavaScript',
+            //             url: '../assets/images/icons/javascript.png'
+            //         },
+            //         {
+            //             name: 'Angular',
+            //             url: '../assets/images/icons/angular.png'
+            //         },
+            //         {
+            //             name: 'Node',
+            //             url: '../assets/images/icons/node.png'
+            //         },
+            //         {
+            //             name: 'Express',
+            //             url: '../assets/images/icons/express.png'
+            //         },
+            //     ]
+            // },
+            {
+                name: 'CoffeeGlyph',
+                description: 'An animated infographic of different coffee recipes, written in C# and ASP.NET Core.',
+                video: '../assets/videos/CoffeeGlyphDemo.mp4',
+                repository: 'https://github.com/eslevy17/CoffeeGlyph',
+                technologies: [
+                    {
+                        name: 'HTML5',
+                        url: '../assets/images/icons/html5.png'
+                    },
+                    {
+                        name: 'CSS3',
+                        url: '../assets/images/icons/css3.png'
+                    },
+                    {
+                        name: 'JavaScript',
+                        url: '../assets/images/icons/javascript.png'
+                    },
+                    {
+                        name: 'C#',
+                        url: '../assets/images/icons/csharp.png'
+                    },
+                    {
+                        name: 'ASP.NET Core',
+                        url: '../assets/images/icons/aspnetcore.png'
+                    },
+                    {
+                        name: 'MySQL',
+                        url: '../assets/images/icons/mysql.png'
+                    },
+                    {
+                        name: 'jQuery',
+                        url: '../assets/images/icons/jquery.png'
+                    },
+                ]
+            },
+        ],
         interests: [
             'Learning languages (Spanish, French, and Russian so far!)',
             'Traveling',

@@ -1,5 +1,4 @@
 * {
-    /* background-color: black; */
     margin: 0px;
     font-family: courier;
     font-weight: 700;
@@ -115,4 +114,8 @@ p {
 
 .subsection {
     display: none;
+}
+
+a {
+    text-decoration: none;
 }

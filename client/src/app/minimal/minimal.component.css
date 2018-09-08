@@ -2,11 +2,11 @@
     font-family: 'open sans', sans-serif;
 }
 
-p {
+p, li {
     line-height: 1.5;
 }
 
-.navbar {
+/* .navbar {
     background-color: #4b4b4b;
     width: 100%;
     text-align: center;
@@ -16,7 +16,7 @@ p {
     color: #e8e8e8;
     margin: 0px;
     padding: 1px;
-}
+} */
 
 .backbutton {
     font-size: 16px;
@@ -25,7 +25,7 @@ p {
     border: none;
     border-radius: 1px;
     cursor: pointer;
-    padding: 12px 36px;
+    padding: 12px 18px;
     position: sticky;
     top: 8px;
     left: 8px;
@@ -38,86 +38,64 @@ p {
     opacity: 0.7;
 }
 
-.parallaxdiv1 {
+.backtext {
+    display: none;
+}
+
+.image1 {
     background: url(../../assets/images/shoe-hang.jpg);
-    min-height: 640px;
-    width: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    position: relative;
 }
 
-.parallaxdiv2 {
+.image2 {
     background: url(../../assets/images/montenegro-climb.jpg);
-    min-height: 640px;
-    width: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: bottom;
-    background-attachment: fixed;
-    position: relative;
+    background-position: bottom right !important;
 }
 
-.parallaxdiv3 {
+.image3 {
     background: url(../../assets/images/pamukkale-climb.jpg);
-    min-height: 640px;
-    width: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    position: relative;
 }
 
-.parallaxdiv4 {
+.image4 {
     background: url(../../assets/images/croatia-walls.jpg);
-    min-height: 640px;
+}
+
+.parallaxdiv {
+    background-position: center;
+    background-color: lightgrey;
+    min-height: 480px;
     width: 100%;
     background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
     position: relative;
 }
 
-.textblockright {
+.textblock {
     font-size: 16px;
-    max-width: 300px;
+    width: 100%;
     position: absolute;
-    top: 30%;
-    right: 10%;
+    top: 15%;
     background-color: #4b4b4b;
     padding: 0 24px;
     color: #e8e8e8;
     box-shadow: 2px 2px 8px 2px #474747;
     opacity: 0.9;
+    box-sizing: border-box;
 }
 
-.textblockleft {
-    font-size: 16px;
-    max-width: 300px;
-    position: absolute;
-    top: 25%;
-    left: 10%;
-    background-color: #4b4b4b;
-    padding: 0 24px;
-    color: #e8e8e8;
-    box-shadow: 2px 2px 8px 2px #474747;
-    opacity: 0.9;
+.textblock a {
+    font-weight: 700;
+    color: #76abe9;
 }
 
-.textblockleft li, .textblockright li {
-    line-height: 2;
-}
-
-.textblockleft a {
-    color: #899efb;
-}
-
-.textblockleft a:visited {
+.textblock a:visited {
     color: #9672c4;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    opacity: 0.7;
 }
 
 .contentblock {
@@ -149,33 +127,49 @@ p {
     padding: 12px;
 }
 
-.skillblock li {
-    line-height: 2;
-}
-
-.schoolblock {
+.schoolblock, .projectblock {
     width: 100%;
     display: inline-block;
     vertical-align: top;
     box-sizing: border-box;
-    padding: 12px;
+    padding: 12px 24px;
     text-align: center;
 }
 
+.techicon {
+    width: 36px;
+    height: 36px;
+    margin: 8px;
+    opacity: 0.4;
+    /* transition: transform 0.1s; */
+}
+
+.techicon:hover {
+    opacity: 0.8;
+    /* transform: scale(1.3); */
+}
+
 @media only screen and (min-width: 480px) {
-    /* .jobblock {width: 33%} */
     .skillblock {width: 50%}
-    /* .schoolblock {width: 50%} */
+    .textblock {max-width: 300px}
+    .textblockleft {left: 10%}
+    .textblockright {right: 10%}
 }
 
 @media only screen and (min-width: 768px) {
+    .backtext {display: block}
+    .backbracket {display: none}
     .jobblock {width: 50%}
     .skillblock {width: 25%}
     .schoolblock {width: 50%}
+    .textblock {top: 25%}
+    .parallaxdiv {
+        background-attachment: fixed;
+        min-height: 640px;
+    }
 }
 
 @media only screen and (min-width: 1024px) {
     .jobblock {width: 33%}
-    /* .skillblock {width: 25%} */
-    /* .schoolblock {width: 50%} */
+    .projectblock {width: 50%}
 }

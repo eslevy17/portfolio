@@ -14,25 +14,28 @@
             <div class="titlediv">
                 <p class="subtitle darkcyan">**** <span class="lightgreen">Eytan Levy's Time-Traveling Portfolio</span> ****</p>
             </div>
-            <p class="subtitle">Menu commands: Press <span class="antiquewhite">[<span class="darkcyan">KEY</span>]</span></p>
+            <p class="subtitle"><span class="tan">Menu commands:</span> Press <span class="antiquewhite">[<span class="darkcyan">KEY</span>]</span></p>
             <div class="inline-block menucommands">
-                <p><span class="antiquewhite">[<span class="darkcyan">I</span>]</span>ntro</p>
-                <p>E<span class="antiquewhite">[<span class="darkcyan">X</span>]</span>perience</p>
-                <p><span class="antiquewhite">[<span class="darkcyan">E</span>]</span>ducation</p>
-                <p><span class="antiquewhite">[<span class="darkcyan">S</span>]</span>kills</p>
-                <p>I<span class="antiquewhite">[<span class="darkcyan">N</span>]</span>terests</p>
-                <p><span class="antiquewhite">[<span class="darkcyan">C</span>]</span>ontact</p>
+                <p (click)="introDisplay()"><span class="antiquewhite">[<span class="darkcyan">I</span>]</span>ntro</p>
+                <p (click)="experienceDisplay()">E<span class="antiquewhite">[<span class="darkcyan">X</span>]</span>perience</p>
+                <p (click)="educationDisplay()"><span class="antiquewhite">[<span class="darkcyan">E</span>]</span>ducation</p>
+                <p (click)="skillsDisplay()"><span class="antiquewhite">[<span class="darkcyan">S</span>]</span>kills</p>
             </div>
             <div class="inline-block menucommands">
-                <p><span class="antiquewhite">[<span class="darkcyan">Esc</span>]</span>ape back to homepage</p>
+                <p (click)="interestsDisplay()">I<span class="antiquewhite">[<span class="darkcyan">N</span>]</span>terests</p>
+                <p (click)="contactDisplay()"><span class="antiquewhite">[<span class="darkcyan">C</span>]</span>ontact</p>
+                <p (click)="projectDisplay()"><span class="antiquewhite">[<span class="darkcyan">P</span>]</span>rojects</p>
             </div>
+            <p class="subtitle" (click)="escapeBack()"><span class="antiquewhite">[<span class="darkcyan">Esc</span>]</span>ape back to homepage</p>
         </div>
+        <br />
 
 
         <div class="subsection" id="intro">
             <p class="subtitle darkcyan">*******************</p>
             <p class="subtitle darkcyan">****** <span class="lightgreen">INTRO</span> ******</p>
             <p class="subtitle darkcyan">*******************</p>
+            <br />
             <p>{{data.intro}}</p>
         </div>
 
@@ -41,13 +44,17 @@
             <p class="subtitle darkcyan">************************</p>
             <p class="subtitle darkcyan">****** <span class="lightgreen">EXPERIENCE</span> ******</p>
             <p class="subtitle darkcyan">************************</p>
-
+            <br />
             <div *ngFor="let job of data.experience">
                 <p><span class="tan">{{job.title}}</span><span *ngIf="job.organization"> <span class="darkcyan"> ({{job.organization}})</span> - {{job.dates}}</span></p>
+                <br />
                 <p>{{job.description}}</p>
-                <p *ngIf="job.skills">Skills used:</p>
+                <br />
+                <p *ngIf="job.skills" class="darkcyan">Skills used:</p>
                 <p *ngFor="let skill of job.skills" class="indent">- {{skill}}</p>
-                <p class="darkcyan">****************************************************</p>
+                <br />
+                <p class="darkcyan">************************************</p>
+                <br />
             </div>
         </div>
 
@@ -56,11 +63,13 @@
             <p class="subtitle darkcyan">***********************</p>
             <p class="subtitle darkcyan">****** <span class="lightgreen">EDUCATION</span> ******</p>
             <p class="subtitle darkcyan">***********************</p>
-
+            <br />
             <div *ngFor='let school of data.education'>
                 <p><span class="tan">{{school.school}}</span> - {{school.dates}}</p>
                 <p>{{school.degree}}</p>
-                <p class="darkcyan">****************************************************</p>
+                <br />
+                <p class="darkcyan">************************************</p>
+                <br />
             </div>
         </div>
 
@@ -69,22 +78,15 @@
             <p class="subtitle darkcyan">********************</p>
             <p class="subtitle darkcyan">****** <span class="lightgreen">SKILLS</span> ******</p>
             <p class="subtitle darkcyan">********************</p>
-            
-            <p class="tan">Front-end design:</p>
-            <p *ngFor="let designskill of data.skills.design" class="indent">- {{designskill}}</p>
-            <p class="darkcyan">******************************************</p>
-            
-            <p class="tan">Programming languages:</p>
-            <p *ngFor="let language of data.skills.languages" class="indent">- {{language}}</p>
-            <p class="darkcyan">******************************************</p>
-            
-            <p class="tan">Frameworks:</p>
-            <p *ngFor="let framework of data.skills.frameworks" class="indent">- {{framework}}</p>
-            <p class="darkcyan">******************************************</p>
-            
-            <p class="tan">Databases:</p>
-            <p *ngFor="let database of data.skills.databases" class="indent">- {{database}}</p>
-            <p class="darkcyan">******************************************</p>
+            <br />
+            <div *ngFor="let skill of data.skills">
+                <p class="tan">{{skill.name}}:</p>
+                <br />
+                <p *ngFor="let technology of skill.technologies" class="indent">- {{technology}}</p>
+                <br />
+                <p class="darkcyan">************************************</p>
+                <br />
+            </div>
         </div>
 
 
@@ -92,21 +94,45 @@
             <p class="subtitle darkcyan">***********************</p>
             <p class="subtitle darkcyan">****** <span class="lightgreen">INTERESTS</span> ******</p>
             <p class="subtitle darkcyan">***********************</p>
-            
+            <br />
             <p *ngFor="let interest of data.interests">- {{interest}}</p>
         </div>
 
-        
+
         <div class="subsection" id="contact">
             <p class="subtitle darkcyan">**************************</p>
             <p class="subtitle darkcyan">****** <span class="lightgreen">CONTACT INFO</span> ******</p>
             <p class="subtitle darkcyan">**************************</p>
+            <br />
             <div *ngFor="let contact of data.contact">
-                <p><span class="tan">{{contact.site}}:</span> {{contact.url}}</p>
+                <p><span class="tan">{{contact.site}}: </span><a href="{{contact.url}}" target="_blank">{{contact.url}}</a></p>
             </div>
-            <p><span class="tan">Email:</span> {{data.email}}</p>
+            <p><span class="tan">Email: </span><a href="mailto:{{data.email}}">{{data.email}}</a></p>
         </div>
 
+        <div class="subsection" id="projects">
+            <p class="subtitle darkcyan">**********************</p>
+            <p class="subtitle darkcyan">****** <span class="lightgreen">PROJECTS</span> ******</p>
+            <p class="subtitle darkcyan">**********************</p>
+            <br />
+            <div *ngFor="let project of data.projects">
+                <p class="tan">{{project.name}}:</p>
+                <br />
+                <p>{{project.description}}</p>
+                <br />
+                <div>
+                    <p class="darkcyan">Technologies used:</p>
+                    <p *ngFor="let technology of project.technologies" class="indent">- {{technology.name}}</p>
+                </div>
+                <br />
+                <p><span class="tan">Repository</span><span class="darkcyan"> (with video demo): </span><a href="{{project.repository}}" target="_blank">{{project.repository}}</a></p>
+                <br />
+                <p class="darkcyan">************************************</p>
+                <br />
+            </div>
+        </div>
+
+        <br />
         <p class="darkcyan inline-block">COMMAND <span class="antiquewhite"> > </span></p><div id="cursor"></div>
 
     </div>

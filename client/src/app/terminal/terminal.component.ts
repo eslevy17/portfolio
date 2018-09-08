@@ -24,32 +24,28 @@ export class TerminalComponent implements OnInit {
     @HostListener('document:keydown', ['$event'])
     keyEvent(event: KeyboardEvent) {
         if (event.keyCode == 67){
-            this.hideSubsections();
-            document.getElementById('contact').style.display = 'block';
+            this.contactDisplay();
         }
         if (event.keyCode == 88){
-            this.hideSubsections();
-            document.getElementById('experience').style.display = 'block';
+            this.experienceDisplay();
         }
         if (event.keyCode == 69){
-            this.hideSubsections();
-            document.getElementById('education').style.display = 'block';
+            this.educationDisplay();
         }
         if (event.keyCode == 78){
-            this.hideSubsections();
-            document.getElementById('interests').style.display = 'block';
+            this.interestsDisplay();
         }
         if (event.keyCode == 83){
-            this.hideSubsections();
-            document.getElementById('skills').style.display = 'block';
+            this.skillsDisplay();
         }
         if (event.keyCode == 73){
-            this.hideSubsections();
-            document.getElementById('intro').style.display = 'block';
+            this.introDisplay();
+        }
+        if (event.keyCode == 80){
+            this.projectDisplay();
         }
         if (event.keyCode == 27){
-            this.stopCursor()
-            this._router.navigate(['/'])
+            this.escapeBack();
         }
     }
     constructor(
@@ -103,6 +99,46 @@ export class TerminalComponent implements OnInit {
         for (i = 0; i < this.subsections.length; i ++) {
             this.subsections[i].style.display = 'none';
         }
+    }
+
+    contactDisplay() {
+        this.hideSubsections();
+        document.getElementById('contact').style.display = 'block';
+    }
+
+    experienceDisplay() {
+        this.hideSubsections();
+        document.getElementById('experience').style.display = 'block';
+    }
+
+    educationDisplay() {
+        this.hideSubsections();
+        document.getElementById('education').style.display = 'block';
+    }
+
+    interestsDisplay() {
+        this.hideSubsections();
+        document.getElementById('interests').style.display = 'block';
+    }
+
+    skillsDisplay() {
+        this.hideSubsections();
+        document.getElementById('skills').style.display = 'block';
+    }
+
+    introDisplay() {
+        this.hideSubsections();
+        document.getElementById('intro').style.display = 'block';
+    }
+
+    projectDisplay() {
+        this.hideSubsections();
+        document.getElementById('projects').style.display = 'block';
+    }
+
+    escapeBack() {
+        this.stopCursor()
+        this._router.navigate(['/'])
     }
 
 }

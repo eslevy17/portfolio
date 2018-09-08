@@ -1,12 +1,12 @@
 <div @fade>
 
     <!-- <div class="navbar"> -->
-        <button class="backbutton" [routerLink]="['/']"><b>BACK</b></button>
+        <button class="backbutton" [routerLink]="['/']"><b><span class="backtext">BACK</span><span class="backbracket"><</span></b></button>
         <!-- <h3 class="titletext">Eytan Levy's time-traveling portfolio: Minimal</h3> -->
     <!-- </div> -->
 
-    <div class="parallaxdiv1">
-        <div class="textblockright">
+    <div class="parallaxdiv image1">
+        <div class="textblock textblockright">
             <h3 style="text-align: center;">Intro:</h3>
             <p>{{data.intro}}</p>
         </div>
@@ -16,17 +16,18 @@
         <h2 style="text-align: center;">- Professional Experience -</h2>
         <div class="jobblock" *ngFor="let job of data.experience">
             <div *ngIf="job.title != 'Miscellaneous'">
-                <p style="text-align: center;"><b>{{job.title}}</b> ({{job.dates}})</p>
+                <h3 style="text-align: center;">{{job.title}}</h3>
+                <p style="text-align: center;">{{job.organization}}, {{job.dates}}</p>
                 <p>{{job.description}}</p>
-                <ul *ngFor="let skill of job.skills">
-                    <li>{{skill}}</li>
+                <ul>
+                    <li *ngFor="let skill of job.skills">{{skill}}</li>
                 </ul>
             </div>
         </div>
     </div>
 
-    <div class="parallaxdiv2">
-        <div class="textblockleft">
+    <div class="parallaxdiv image2">
+        <div class="textblock textblockleft">
             <h3 style="text-align: center;">Interests and extracurriculars:</h3>
             <ul>
                 <li *ngFor="let interest of data.interests">{{interest}}</li>
@@ -36,14 +37,14 @@
 
     <div class="contentblock">
         <h2 style="text-align: center;">- Educational History -</h2>
-        <div class="schoolblock "*ngFor="let school of data.education">
-            <p><b>{{school.school}}</b> ({{school.dates}})</p>
-            <p>{{school.degree}}</p>
+        <div class="schoolblock" *ngFor="let school of data.education">
+            <h3>{{school.school}}</h3>
+            <p>{{school.degree}} ({{school.dates}})</p>
         </div>
     </div>
 
-    <div class="parallaxdiv3">
-        <div class="textblockright">
+    <div class="parallaxdiv image3">
+        <div class="textblock textblockright">
             <h3 style="text-align: center;">References</h3>
             <p>(coming soon!)</p>
         </div>
@@ -51,40 +52,35 @@
 
     <div class="contentblock">
         <h2 style="text-align: center;">- Coding Skills -</h2>
-        <div class="skillblock">
-            <p style="text-align: center;"><b>Front-end design:</b></p>
+        <div class="skillblock" *ngFor="let skill of data.skills">
+            <h3 style="text-align: center;">{{skill.name}}:</h3>
             <ul>
-                <li *ngFor="let skill of data.skills.design">{{skill}}</li>
-            </ul>
-        </div>
-        <div class="skillblock">
-            <p style="text-align: center;"><b>Languages:</b></p>
-            <ul>
-                <li *ngFor="let skill of data.skills.languages">{{skill}}</li>
-            </ul>
-        </div>
-        <div class="skillblock">
-            <p style="text-align: center;"><b>Frameworks:</b></p>
-            <ul>
-                <li *ngFor="let skill of data.skills.frameworks">{{skill}}</li>
-            </ul>
-        </div>
-        <div class="skillblock">
-            <p style="text-align: center;"><b>Databases:</b></p>
-            <ul>
-                <li *ngFor="let skill of data.skills.databases">{{skill}}</li>
+                <li *ngFor="let technology of skill.technologies">{{technology}}</li>
             </ul>
         </div>
     </div>
 
-    <div class="parallaxdiv4">
-        <div class="textblockleft">
-            <h3 style="text-align: center;">Contact info:</h3>
-            <div *ngFor="let site of data.contact">
-                <p><a href="{{site.url}}" target="_blank">{{site.site}}</a>   </p>
-            </div>
+    <div class="parallaxdiv image4">
+        <div class="textblock textblockleft" style="text-align: center;">
+            <h3>Contact info:</h3>
+            <p *ngFor="let site of data.contact"><a href="{{site.url}}" target="_blank">{{site.site}}</a></p>
             <p><a href="mailto:{{data.email}}">Email</a></p>
+        </div>
+    </div>
 
+    <div class="contentblock">
+        <h2 style="text-align: center;">- Projects -</h2>
+        <div class="projectblock" *ngFor="let project of data.projects">
+            <h3>{{ project.name }}</h3>
+            <p>{{ project.description }}</p>
+            <video width="100%" controls>
+                <source src="{{project.video}}" type="video/mp4">
+            </video>
+            <h4>Technologies used:</h4>
+            <img *ngFor="let technology of project.technologies" class="techicon" src="{{technology.url}}" alt="{{technology.name}}" title="{{technology.name}}" />
+            <p><a href="{{project.repository}}" target="_blank">Repository</a></p>
+            <br />
+            <br />
         </div>
     </div>
 
