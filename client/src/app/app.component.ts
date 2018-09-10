@@ -151,6 +151,7 @@ export class AppComponent {
                 description: 'A Django project using jQuery animations and external data visualization libraries to create a colorful progress-tracking app.',
                 video: '../assets/videos/jQueryGoalsDemo.mp4',
                 repository: 'https://github.com/eslevy17/jQueryGoals',
+                url: '',
                 technologies: [
                     {
                         name: 'HTML5',
@@ -222,6 +223,7 @@ export class AppComponent {
                 description: 'An animated infographic of different coffee recipes, written in C# and ASP.NET Core.',
                 video: '../assets/videos/CoffeeGlyphDemo.mp4',
                 repository: 'https://github.com/eslevy17/CoffeeGlyph',
+                url: 'http://18.188.188.167',
                 technologies: [
                     {
                         name: 'HTML5',

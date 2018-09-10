@@ -120,12 +120,12 @@
                 <br />
                 <p>{{project.description}}</p>
                 <br />
-                <div>
-                    <p class="darkcyan">Technologies used:</p>
-                    <p *ngFor="let technology of project.technologies" class="indent">- {{technology.name}}</p>
-                </div>
+                <p class="darkcyan">Technologies used:</p>
+                <p *ngFor="let technology of project.technologies" class="indent">- {{technology.name}}</p>
                 <br />
-                <p><span class="tan">Repository</span><span class="darkcyan"> (with video demo): </span><a href="{{project.repository}}" target="_blank">{{project.repository}}</a></p>
+                <p *ngIf="project.url != ''"><span class="tan">Site URL: </span><a href="{{project.url}}" target="_blank">{{project.url}}</a></p>
+                <p><span class="tan">Repository: </span><a href="{{project.repository}}" target="_blank">{{project.repository}}</a></p>
+                <p><span class="tan">Video Demo: </span><a href="{{project.video}}" target="_blank">{{project.video.slice(2,project.video.length)}}</a></p>
                 <br />
                 <p class="darkcyan">************************************</p>
                 <br />
