@@ -14,7 +14,7 @@ export class AppComponent {
                 title: 'Travel gear blogger',
                 organization: 'Self-employed',
                 dates: '2013 to present',
-                description: 'Produced content for my own site, focusing on travel gear and related advice for budget backpackers, running it all myself and working with various brands on product development and prototype testing.',
+                description: 'Built up a site read all over the world, focusing on travel gear and related advice for budget backpackers, running it all myself and working with various companies on product development and prototype testing.',
                 skills: [
                     'Wordpress',
                     'Keyword research',
@@ -51,7 +51,7 @@ export class AppComponent {
                 title: 'Field Manager',
                 organization: 'Grassroots Campaigns',
                 dates: '2008 to 2010',
-                description: 'Door to door and street fundraising for a variety of non-profit organizations, including the DNC, ACLU, LCV, Save the Children, ASPCA, and NRDC, spanning the topics of political campaigns, civil rights, environmental protection, third world development, and animal welfare. Managed and coached small teams of new and experienced staff, scouted and mapped fundraising locations, and worked through rain, shine, snow, hail, heat waves, and unpleasant canines.',
+                description: 'Door-to-door and street fundraising for a variety of non-profit campaigns, including elections, civil rights, environmental activism, third world development, and animal welfare. Managed and coached small teams of new and experienced staff, scouted and mapped fundraising locations, and worked through rain, shine, snow, hail, heat waves, and unpleasant canines.',
                 skills: [
                     'Fundraising',
                     'Team management',
@@ -62,9 +62,9 @@ export class AppComponent {
                 title: 'English Teacher',
                 organization: 'TOP English Camp',
                 dates: '2008',
-                description: 'Conducted English language lessons and other activities with students of various ages, from elementary through high school students, in various cities throughout Taiwan.',
+                description: 'Taught students of all ages, from elementary to high school, in various cities throughout Taiwan.',
                 skills: [
-                    'Keeping the attention of a classroom of 30 high school kids with too much energy to keep still'
+                    'Keeping the attention of a classroom of 30 high school kids with too much energy to hold still'
                 ]
             },
             {
@@ -110,13 +110,14 @@ export class AppComponent {
         ],
         skills: [
             {
-                name: 'Design',
+                name: 'Front-end design',
                 technologies: [
                     'HTML',
                     'CSS',
-                    'JQuery',
+                    'jQuery',
                     'Bootstrap',
                     'Materialize',
+                    'AJAX',
                 ]
             },
             {
@@ -125,6 +126,7 @@ export class AppComponent {
                     'JavaScript',
                     'Python',
                     'C#',
+                    'TypeScript',
                 ]
             },
             {
@@ -134,16 +136,56 @@ export class AppComponent {
                     'Django',
                     'Angular',
                     'ASP.NET Core',
+                    'Entity',
                 ]
             },
             {
-                name: 'Databases',
+                name: 'Server-side',
                 technologies: [
                     'SQL',
+                    'MySQL',
                     'SQLite',
                     'MongoDB',
+                    'Mongoose',
+                    'Node.js',
+                    'Express',
                 ]
-            }
+            },
+            {
+                name: 'Concepts',
+                technologies: [
+                    'OOP',
+                    'MVC',
+                    'ORM',
+                    'TDD',
+                    'RESTful routing',
+                    'Strong typing',
+                    'Responsive web design',
+                ]
+            },
+            {
+                name: 'Data structures',
+                technologies: [
+                    'Linked lists',
+                    'Stacks',
+                    'Queues',
+                    'Binary search trees',
+                    'Heaps',
+                    'Tries',
+                    'Graphs',
+                    'Sorts',
+                ]
+            },
+            {
+                name: 'Others',
+                technologies: [
+                    'Git',
+                    'Github',
+                    'AWS',
+                    'SEO',
+                    'Affiliate Marketing',
+                ]
+            },
         ],
         projects: [
             {
@@ -264,6 +306,7 @@ export class AppComponent {
             'Martial arts',
             'High school debate team',
             'Outward Bound',
+            '#1 on reddit!',
         ],
         contact: [
             {
