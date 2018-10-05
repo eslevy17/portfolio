@@ -149,6 +149,7 @@ export class AppComponent {
                     'Mongoose',
                     'Node.js',
                     'Express',
+                    'AWS',
                 ]
             },
             {
@@ -181,9 +182,15 @@ export class AppComponent {
                 technologies: [
                     'Git',
                     'Github',
-                    'AWS',
                     'SEO',
                     'Affiliate Marketing',
+                ]
+            },
+            {
+                name: 'In progress',
+                technologies: [
+                    'React',
+                    'Vue',
                 ]
             },
         ],
