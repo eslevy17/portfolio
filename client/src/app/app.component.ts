@@ -137,6 +137,7 @@ export class AppComponent {
                     'Angular',
                     'ASP.NET Core',
                     'Entity',
+                    'React'
                 ]
             },
             {
@@ -150,6 +151,7 @@ export class AppComponent {
                     'Node.js',
                     'Express',
                     'AWS',
+                    'PostgreSQL'
                 ]
             },
             {
@@ -189,8 +191,8 @@ export class AppComponent {
             {
                 name: 'In progress',
                 technologies: [
-                    'React',
                     'Vue',
+                    'Redux'
                 ]
             },
         ],
@@ -303,6 +305,43 @@ export class AppComponent {
                     {
                         name: 'jQuery',
                         url: '../assets/images/icons/jquery.png'
+                    },
+                ]
+            },
+            {
+                name: 'Wishlist',
+                description: 'A budget-tracking app for major purchases, both wanted or needed, with a Postgres back-end and React up front.',
+                video: '../assets/videos/Wishlist.mp4',
+                repository: 'https://github.com/eslevy17/wishlist',
+                url: '',
+                technologies: [
+                    {
+                        name: 'HTML5',
+                        url: '../assets/images/icons/html5.png'
+                    },
+                    {
+                        name: 'CSS3',
+                        url: '../assets/images/icons/css3.png'
+                    },
+                    {
+                        name: 'JavaScript',
+                        url: '../assets/images/icons/javascript.png'
+                    },
+                    {
+                        name: 'React',
+                        url: '../assets/images/icons/react.png'
+                    },
+                    {
+                        name: 'PostgreSQL',
+                        url: '../assets/images/icons/postgresql.png'
+                    },
+                    {
+                        name: 'Node',
+                        url: '../assets/images/icons/node.png'
+                    },
+                    {
+                        name: 'Express',
+                        url: '../assets/images/icons/express.png'
                     },
                 ]
             },
