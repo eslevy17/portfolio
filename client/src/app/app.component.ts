@@ -127,6 +127,7 @@ export class AppComponent {
                     'Python',
                     'C#',
                     'TypeScript',
+                    'Perl'
                 ]
             },
             {
@@ -137,7 +138,7 @@ export class AppComponent {
                     'Angular',
                     'ASP.NET Core',
                     'Entity',
-                    'React'
+                    'React/Redux'
                 ]
             },
             {
@@ -146,12 +147,13 @@ export class AppComponent {
                     'SQL',
                     'MySQL',
                     'SQLite',
+                    'PostgreSQL',
+                    'Oracle SQL',
                     'MongoDB',
                     'Mongoose',
                     'Node.js',
                     'Express',
-                    'AWS',
-                    'PostgreSQL'
+                    'AWS'
                 ]
             },
             {
@@ -182,8 +184,11 @@ export class AppComponent {
             {
                 name: 'Others',
                 technologies: [
+                    'Linux',
                     'Git',
                     'Github',
+                    'Cypress',
+                    'Jira',
                     'SEO',
                     'Affiliate Marketing',
                 ]
@@ -191,8 +196,7 @@ export class AppComponent {
             {
                 name: 'In progress',
                 technologies: [
-                    'Vue',
-                    'Redux'
+                    'Vue'
                 ]
             },
         ],

@@ -239,6 +239,7 @@ var AppComponent = /** @class */ (function () {
                         'Python',
                         'C#',
                         'TypeScript',
+                        'Perl'
                     ]
                 },
                 {
@@ -249,6 +250,7 @@ var AppComponent = /** @class */ (function () {
                         'Angular',
                         'ASP.NET Core',
                         'Entity',
+                        'React/Redux'
                     ]
                 },
                 {
@@ -257,11 +259,13 @@ var AppComponent = /** @class */ (function () {
                         'SQL',
                         'MySQL',
                         'SQLite',
+                        'PostgreSQL',
+                        'Oracle SQL',
                         'MongoDB',
                         'Mongoose',
                         'Node.js',
                         'Express',
-                        'AWS',
+                        'AWS'
                     ]
                 },
                 {
@@ -292,8 +296,11 @@ var AppComponent = /** @class */ (function () {
                 {
                     name: 'Others',
                     technologies: [
+                        'Linux',
                         'Git',
                         'Github',
+                        'Cypress',
+                        'Jira',
                         'SEO',
                         'Affiliate Marketing',
                     ]
@@ -301,8 +308,7 @@ var AppComponent = /** @class */ (function () {
                 {
                     name: 'In progress',
                     technologies: [
-                        'React',
-                        'Vue',
+                        'Vue'
                     ]
                 },
             ],
@@ -415,6 +421,43 @@ var AppComponent = /** @class */ (function () {
                         {
                             name: 'jQuery',
                             url: '../assets/images/icons/jquery.png'
+                        },
+                    ]
+                },
+                {
+                    name: 'Wishlist',
+                    description: 'A budget-tracking app for major purchases, both wanted or needed, with a Postgres back-end and React up front.',
+                    video: '../assets/videos/Wishlist.mp4',
+                    repository: 'https://github.com/eslevy17/wishlist',
+                    url: '',
+                    technologies: [
+                        {
+                            name: 'HTML5',
+                            url: '../assets/images/icons/html5.png'
+                        },
+                        {
+                            name: 'CSS3',
+                            url: '../assets/images/icons/css3.png'
+                        },
+                        {
+                            name: 'JavaScript',
+                            url: '../assets/images/icons/javascript.png'
+                        },
+                        {
+                            name: 'React',
+                            url: '../assets/images/icons/react.png'
+                        },
+                        {
+                            name: 'PostgreSQL',
+                            url: '../assets/images/icons/postgresql.png'
+                        },
+                        {
+                            name: 'Node',
+                            url: '../assets/images/icons/node.png'
+                        },
+                        {
+                            name: 'Express',
+                            url: '../assets/images/icons/express.png'
                         },
                     ]
                 },
