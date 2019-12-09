@@ -11,6 +11,23 @@ export class AppComponent {
         intro: 'Eytan is a full-stack developer in the Seattle area, interested in taking on new challenges in web design and programming. Algorithm practice has been the most fun, though watching a project start coming together is a great feeling too.',
         experience: [
             {
+                title: 'Software Developer',
+                organization: 'Lucidoc',
+                dates: 'January 2019 to present',
+                description: 'Worked on migrating a legacy Perl application over to modern-day TypeScript, React, and Node, while handling smaller bug fixes and product enhancements on existing features as they came up.',
+                skills: [
+                    'TypeScript',
+                    'React',
+                    'Node',
+                    'Express',
+                    'Oracle SQL',
+                    'TypeORM',
+                    'Perl',
+                    'Docker',
+                    'AWS'
+                    ]
+            },
+            {
                 title: 'Travel gear blogger',
                 organization: 'Self-employed',
                 dates: '2013 to present',
@@ -188,9 +205,9 @@ export class AppComponent {
                     'Git',
                     'Github',
                     'Cypress',
+                    'Docker',
                     'Jira',
-                    'SEO',
-                    'Affiliate Marketing',
+                    'SEO'
                 ]
             },
             {
